@@ -6,9 +6,11 @@ from .models import Book
 
 class Another(View):
 
-    books = Book.objects.all()
+    books = Book.objects.filter
+    output = ''
 
-    output = f"We have {len(books)} that many books in DB"
+    for book in books:
+        output += f"We have {book.title} books in ID {book.id}<br>"
 
     def get(self, request):
         return HttpResponse(self.output)
