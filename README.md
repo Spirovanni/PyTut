@@ -11,3 +11,8 @@ PyTut
 ##Migrate to Database
 
     python manage.py migrate
+    
+##Add Super User
+
+    python manage.py createsuperuser
+    
