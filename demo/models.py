@@ -44,4 +44,4 @@ class Character(models.Model):
 class Author(models.Model):
     name = models.CharField(max_length=30)
     surname = models.CharField(max_length=30)
-    books = models.ManyToManyField(Book)
+    books = models.ManyToManyField(Book, related_name='authors')
